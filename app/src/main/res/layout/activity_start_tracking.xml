@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".StartTracking">
+   <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#1E9FFF"
+            android:id="@+id/Rely">
+
+            <TextView
+                android:id="@+id/numberTracker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="100"
+                android:text="@string/number_tracker"
+                android:textAlignment="center"
+                android:textColor="@color/colorAccent"
+                android:textSize="30sp"
+                tools:ignore="MissingConstraints" />
+            <TextView
+                android:id="@+id/search_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/numberTracker"
+                android:ems="100"
+                android:text="@string/search"
+                android:textAlignment="center"
+                android:textColor="@color/colorAccent"
+                android:textSize="30sp"
+                tools:ignore="MissingConstraints" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/search_text"
+                android:layout_centerInParent="true"
+                android:layout_margin="20dp">
+
+                <EditText
+                    android:id="@+id/search_phone_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="@color/colorAccent"
+                    android:hint="@string/enter_phone_number"
+                    android:inputType="numberSigned"
+                    android:maxLength="11"
+                    android:text="3008297312"
+                    android:textAlignment="center"
+                    android:textSize="25sp" />
+
+                <ImageButton
+                    android:id="@+id/search_button"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/ic_launcher_search_foreground"
+                    />
+            </LinearLayout>
+        </RelativeLayout>
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/Rely"
+            >
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Name"
+                    android:layout_margin="5sp"
+                    android:ems="100"
+                    android:textSize="20dp"
+                   />
+                <EditText
+                    android:id="@+id/Name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_margin="5sp"
+                    android:ems="100"
+                    android:freezesText="true"
+                    android:inputType="textPersonName"
+                    android:textSize="20sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Number"
+                    android:layout_margin="5sp"
+                    android:ems="100"
+                    android:textSize="20dp"
+                    />
+                <EditText
+                    android:id="@+id/Number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_margin="5sp"
+                    android:ems="100"
+                    android:maxLength="11"
+                    android:inputType="numberSigned"
+                    android:textSize="20sp"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="CNIC"
+                    android:layout_margin="5sp"
+                    android:ems="100"
+                    android:textSize="20dp"
+                    />
+                <EditText
+                    android:id="@+id/cnic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_margin="5dp"
+                    android:ems="100"
+                    android:inputType="textPersonName"
+                    android:textSize="20sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5sp"
+                    android:ems="100"
+                    android:text="Registration Date"
+                    android:textSize="20dp" />
+                <EditText
+                    android:id="@+id/Registration_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_margin="5dp"
+                    android:ems="100"
+                    android:inputType="date|textAutoCorrect"
+                    android:textSize="20sp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Address"
+                    android:layout_margin="5sp"
+                    android:ems="100"
+                    android:textSize="20dp"
+                    />
+                <EditText
+                    android:id="@+id/Address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_margin="5dp"
+                    android:ems="100"
+                    android:inputType="textPersonName"
+                    android:textSize="20sp"/>
+
+
+            </LinearLayout>
+
+        </ScrollView>
+  </RelativeLayout>
+</ScrollView>
