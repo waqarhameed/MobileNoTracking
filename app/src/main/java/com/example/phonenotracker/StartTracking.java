@@ -72,6 +72,7 @@ public class StartTracking extends AppCompatActivity {
                     @Override
                     public void onError(ANError anError) {
                         Toast.makeText(getApplicationContext(), "Network not available", Toast.LENGTH_LONG).show();
+                        AndroidNetworking.cancel(anError);
                     }
                 });
     }

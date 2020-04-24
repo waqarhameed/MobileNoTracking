@@ -1,19 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".StartTracking">
-
-    <RelativeLayout
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
+        android:layout_height="match_parent"
+        tools:context=".StartTracking">
+   <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
         <RelativeLayout
-            android:id="@+id/Rely"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#1E9FFF">
+            android:background="#1E9FFF"
+            android:id="@+id/Rely">
 
             <TextView
                 android:id="@+id/numberTracker"
@@ -25,7 +23,6 @@
                 android:textColor="@color/colorAccent"
                 android:textSize="30sp"
                 tools:ignore="MissingConstraints" />
-
             <TextView
                 android:id="@+id/search_text"
                 android:layout_width="wrap_content"
@@ -37,7 +34,6 @@
                 android:textColor="@color/colorAccent"
                 android:textSize="30sp"
                 tools:ignore="MissingConstraints" />
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -50,7 +46,6 @@
                     android:layout_width="0dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
-                    android:autofillHints=""
                     android:background="@color/colorAccent"
                     android:hint="@string/enter_phone_number"
                     android:inputType="numberSigned"
@@ -58,7 +53,8 @@
                     android:text="@string/_3008297312"
                     android:textAlignment="center"
                     android:textSize="25sp"
-                    tools:ignore="TextFields" />
+                    tools:ignore="TextFields"
+                    android:autofillHints="" />
 
                 <ImageButton
                     android:id="@+id/search_button"
@@ -68,28 +64,27 @@
                     android:contentDescription="@string/_3008297312" />
             </LinearLayout>
         </RelativeLayout>
-
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_below="@id/Rely"
-            tools:ignore="NestedScrolling">
 
+            >
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:orientation="vertical">
-
+                android:orientation="vertical"
+                >
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:text="@string/name"
                     android:layout_margin="5sp"
                     android:ems="100"
-                    android:text="@string/name"
-                    android:textSize="20sp" />
-
-                <TextView
+                    android:textSize="20sp"
+                   />
+                <EditText
                     android:id="@+id/Name"
                     android:layout_width="wrap_content"
                     android:layout_height="50dp"
@@ -97,46 +92,41 @@
                     android:ems="100"
                     android:freezesText="true"
                     android:inputType="textPersonName"
-                    android:textSize="20sp"
-                    tools:ignore="TextViewEdits" />
-
+                    android:textSize="20sp" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:text="@string/number"
                     android:layout_margin="5sp"
                     android:ems="100"
-                    android:text="@string/number"
-                    android:textSize="20sp" />
-
-                <TextView
+                    android:textSize="20sp"
+                    />
+                <EditText
                     android:id="@+id/Number"
                     android:layout_width="wrap_content"
                     android:layout_height="50dp"
                     android:layout_margin="5sp"
                     android:ems="100"
-                    android:inputType="numberSigned"
                     android:maxLength="11"
+                    android:inputType="numberSigned"
                     android:textSize="20sp"
-                    tools:ignore="TextViewEdits" />
-
+                    android:autofillHints="" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:text="@string/cnic"
                     android:layout_margin="5sp"
                     android:ems="100"
-                    android:text="@string/cnic"
-                    android:textSize="20sp" />
-
-                <TextView
+                    android:textSize="20sp"
+                    />
+                <EditText
                     android:id="@+id/cnic"
                     android:layout_width="wrap_content"
                     android:layout_height="50dp"
                     android:layout_margin="5dp"
                     android:ems="100"
                     android:inputType="textPersonName"
-                    android:textSize="20sp"
-                    tools:ignore="TextViewEdits" />
-
+                    android:textSize="20sp" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -144,37 +134,34 @@
                     android:ems="100"
                     android:text="@string/registration_date"
                     android:textSize="20sp" />
-
-                <TextView
+                <EditText
                     android:id="@+id/Registration_date"
                     android:layout_width="wrap_content"
                     android:layout_height="50dp"
                     android:layout_margin="5dp"
                     android:ems="100"
                     android:inputType="date|textAutoCorrect"
-                    android:textSize="20sp"
-                    tools:ignore="TextViewEdits" />
-
+                    android:textSize="20sp"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:text="@string/address"
                     android:layout_margin="5sp"
                     android:ems="100"
-                    android:text="@string/address"
-                    android:textSize="20sp" />
-
-                <TextView
+                    android:textSize="20sp"
+                    />
+                <EditText
                     android:id="@+id/Address"
                     android:layout_width="wrap_content"
                     android:layout_height="50dp"
                     android:layout_margin="5dp"
                     android:inputType="textPersonName"
                     android:textSize="20sp"
-                    tools:ignore="TextViewEdits" />
+                    android:autofillHints="" />
 
 
             </LinearLayout>
 
         </ScrollView>
-    </RelativeLayout>
+  </RelativeLayout>
 </ScrollView>

@@ -4,10 +4,15 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.amazonaws.mobile.client.AWSMobileClient;
+import com.amazonaws.mobile.client.Callback;
+import com.amazonaws.mobile.client.SignInUIOptions;
+import com.amazonaws.mobile.client.UserStateDetails;
 import com.androidnetworking.AndroidNetworking;
 import com.androidnetworking.common.Priority;
 import com.androidnetworking.error.ANError;
@@ -16,8 +21,12 @@ import com.androidnetworking.interfaces.ParsedRequestListener;
 import java.text.NumberFormat;
 import java.util.Locale;
 
+import static com.example.phonenotracker.R.layout.activity_main;
+
 
 public class MainActivity extends AppCompatActivity {
+    private static final String TAG = MainActivity.class.getSimpleName();
+
     private TextView dbName;
     private TextView dbStatus;
     private TextView totalRecords;
@@ -25,7 +34,8 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(activity_main);
+
 
         dbName = findViewById(R.id.database_name);
         dbStatus = findViewById(R.id.database_status);
@@ -46,7 +56,6 @@ public class MainActivity extends AppCompatActivity {
                         dbName.setText(databaseName);
                         dbStatus.setText(databaseStatus);
                         totalRecords.setText(totalNum);
-
                     }
 
                     @Override
